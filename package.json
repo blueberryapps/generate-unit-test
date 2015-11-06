@@ -1,7 +1,7 @@
 {
-  "name": "este-module",
+  "name": "generate-unit-test",
   "version": "0.1.0",
-  "description": "Babeljs Mocha Node module boilerplate",
+  "description": "Generate unit test for Mocha, Chai and sinon from component source file",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
@@ -19,23 +19,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/este/module.git"
+    "url": "git+https://github.com/blueberryapps/generate-unit-test.git"
   },
   "keywords": [
     "babeljs",
-    "boilerplate",
     "es6",
     "es7",
     "mocha",
     "module",
     "node"
   ],
-  "author": "Daniel Steigerwald",
+  "author": "Ondrej Bartas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/este/module/issues"
+    "url": "https://github.com/blueberryapps/generate-unit-test/issues"
   },
-  "homepage": "https://github.com/este/module#readme",
+  "homepage": "https://github.com/blueberryapps/generate-unit-test#readme",
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",

@@ -43,7 +43,20 @@
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.5.1",
     "expect": "^1.12.2",
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
     "mocha": "^2.3.3",
+    "nunjucks": "^2.1.0",
+    "react": "^0.14.2",
+    "react-docgen": "^2.4.0",
     "rimraf": "^2.4.3"
+  },
+  "peerDependencies": {
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
+    "nunjucks": "^2.1.0",
+    "react-docgen": "^2.4.0"
   }
 }

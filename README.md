@@ -1,13 +1,9 @@
-# este-module
-
-> Este module boilerplate.
-
-Boilerplate for Node module written in Babel and tested with Mocha.
+# generate-unit-test
 
 ## Install
 
 ```sh
-$ npm install --save your-module
+$ npm install --save generate-unit-test
 ```
 
 ## Usage
@@ -18,4 +14,6 @@ $ npm install --save your-module
 
 ## License
 
-MIT © [Daniel Steigerwald](https://twitter.com/steida)
+MIT © [Ondrej Bartas](https://github.com/ondrejbartas)
+
+# Boilerplated from (https://github.com/este/module)

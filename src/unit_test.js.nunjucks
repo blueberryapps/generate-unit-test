@@ -1,0 +1,31 @@
+import {{ name }} from '../{{ fileName }}';
+
+import {
+  expect,
+  React,
+  sinon,
+  TestUtils
+} from '{{mochaConfiguration}}';
+
+describe('{{ name }} component', () => {
+
+  const data = {
+{{ formatedState }}
+  };
+
+  let sandbox, {{ instanceName }}, content;
+
+  beforeEach(() => {
+    sandbox = sinon.sandbox.create();
+    {{ instanceName }} = TestUtils.renderIntoDocument(<{{ name }} {...data} />);
+    content = TestUtils.findRenderedDOMComponentWithTag({{ instanceName }}, '{{ returnRootElement }}');
+  });
+
+  afterEach(() => {
+    sandbox.restore();
+  });
+
+  it('should generate !!Something!! inside of {{ returnRootElement }}', () => {
+    expect(content.innerHTML).to.contains('!!Something!!');
+  });
+});

@@ -15,17 +15,34 @@ describe('{{ name }} component', () => {
 
   let sandbox, {{ instanceName }}, content;
 
+  function createComponent(overrideData = {}) {
+    const props = {...data, ...overrideData}
+    {{ instanceName }} = TestUtils.renderIntoDocument(<{{ name }} {...props} />);
+    content = TestUtils.findRenderedDOMComponentWithTag({{ instanceName }}, '{{ returnRootElement }}');
+  }
+
   beforeEach(() => {
     sandbox = sinon.sandbox.create();
-    {{ instanceName }} = TestUtils.renderIntoDocument(<{{ name }} {...data} />);
-    content = TestUtils.findRenderedDOMComponentWithTag({{ instanceName }}, '{{ returnRootElement }}');
+    createComponent()
   });
 
   afterEach(() => {
     sandbox.restore();
   });
 
-  it('should generate !!Something!! inside of {{ returnRootElement }}', () => {
-    expect(content.innerHTML).to.contains('!!Something!!');
-  });
+// EXAMPLES:
+//
+//  it('default should generate !!Something!! inside of {{ returnRootElement }}', () => {
+//    expect(content.innerHTML).to.contains('!!Something!!');
+//  });
+//
+//  it('defaul should have attribute style which contains font-icons', () => {
+//    expect(content.getAttribute('style')).to.contains('font-family:font-icons');
+//  });
+//
+//  it('should override fontFamily and style will contains font-override', () => {
+//    createComponent({fontFamily: 'font-override'})
+//    expect(content.getAttribute('style')).to.contains('font-family:font-override');
+//  });
+
 });

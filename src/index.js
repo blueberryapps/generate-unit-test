@@ -9,7 +9,7 @@ import {parse} from 'react-docgen';
 
 const nunjuckEnv = nunjucks.configure(`${__dirname}/../templates/`, {autoescape: false});
 
-export default function generateTest(file, pwd, mochaTestHelper = 'test/mochaTestHelper222') {
+export default function generateTest(file, pwd, mochaTestHelper = 'test/mochaTestHelper') {
   const absolutePath = path.resolve(file);
   const relativePath = absolutePath.replace(pwd, '');
   const relativePathSplited = relativePath.split('/');

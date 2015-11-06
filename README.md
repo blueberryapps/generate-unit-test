@@ -10,10 +10,25 @@ checkout: from [Headline.react.js](example/Headline.react.js) it creates test di
 $ npm install --save generate-unit-test
 ```
 
-## Usage
+## Gulp Usage
 
 ```js
-// TODO: Add usage.
+import generateUnitTest from 'generate-unit-test';
+
+gulp.task('generate-test', (done) => {
+  if (yargs.argv.file)
+    generateUnitTest(`${__dirname}/${yargs.argv.file}`, __dirname, 'test/mochaTestHelperą')
+  else
+    console.error('Please provide component file by --file some/file')
+})
+
+# => gulp generate-test --file src/client/components/Xyz.js
+```
+
+## CLI Usage
+
+```
+generate-unit-test src/client/components/Xyz.js src/client/components/Zaz.js
 ```
 
 ## License

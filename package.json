@@ -4,7 +4,10 @@
   "description": "Generate unit test for Mocha, Chai and sinon from component source file",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
-  "scripts": {
+  "bin": {
+     "generate-unit-test" : "bin/generate-unit-test.js"
+   },
+   "scripts": {
     "build": "npm run build:lib",
     "build:lib": "babel src --out-dir lib",
     "check": "npm run lint && npm run test",

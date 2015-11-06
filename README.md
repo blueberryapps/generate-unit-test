@@ -17,7 +17,8 @@ import generateUnitTest from 'generate-unit-test';
 
 gulp.task('generate-test', (done) => {
   if (yargs.argv.file)
-    generateUnitTest(`${__dirname}/${yargs.argv.file}`, __dirname, 'test/mochaTestHelperą')
+    // test/mochaTestHelper - is relative path to project which point to mocha test helper
+    generateUnitTest(`${__dirname}/${yargs.argv.file}`, __dirname, 'test/mochaTestHelper')
   else
     console.error('Please provide component file by --file some/file')
 })
@@ -29,6 +30,29 @@ gulp.task('generate-test', (done) => {
 
 ```
 generate-unit-test src/client/components/Xyz.js src/client/components/Zaz.js
+```
+
+## mochaTestHelper
+
+```js
+import chai, {assert, expect} from 'chai';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+
+chai.should();
+chai.use(sinonChai);
+
+export {
+  assert,
+  chai,
+  expect,
+  React,
+  sinon,
+  sinonChai,
+  TestUtils
+};
 ```
 
 ## License
